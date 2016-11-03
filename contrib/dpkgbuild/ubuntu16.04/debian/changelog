@@ -1,0 +1,5 @@
+jsrdbg (0.0.6-0ubuntu1) xenial; urgency=medium
+
+  * deb packaging Closes:#1 
+
+ -- Marcel Schlitzer <marcel.schlitzer@gmail.com>  Thu, 20 Oct 2016 17:42:02 +0200
