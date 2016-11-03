@@ -9,16 +9,14 @@ Build-Depends: debhelper (>=9),
  gettext, 
  libmozjs-24-dev, 
  libreadline-dev, 
- gettext, 
+ gettext,
  autotools-dev,
- dh-autoreconf,
- libc6
-Standards-Version: 3.9.7
+Standards-Version: 3.9.5
 Homepage: https://github.com/swojtasiak/jsrdbg
 
 Package: jsrdbg
 Architecture: any
-Depends: libjsrdbg (= ${binary:Version}), ${misc:Depends}
+Depends: libc6, libjsrdbg (= ${binary:Version}), ${misc:Depends}
 Suggests: jsrdbg-doc
 Description: JavaScript Remote Debugger for SpiderMonkey
  JSRDBG is an implementation of a high level debugging protocol for SpiderMonkey
@@ -45,6 +43,7 @@ Package: libjsrdbg
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends}
+Suggests: jsrbdg-doc
 Description: JavaScript Remote Debugger library
  JSRDBG is an implementation of a high level debugging protocol for SpiderMonkey
  engine which is available as a shared library. The library can be used to
@@ -52,10 +51,3 @@ Description: JavaScript Remote Debugger library
  SpiderMonkey engine. There are several integration possibilities including
  exposition of the high level debugger API locally directly to the application
  and even exposing it to remote clients using full duplex TCP/IP communication.
-
-Package: jsrdbg-doc
-Section: doc
-Architecture: all
-Depends: ${misc:Depends}
-Description: Documentation for JavaScript Remote Debugger
- This package provides the documentation for the JSRDBG for SpiderMonkey
